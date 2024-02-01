@@ -2,9 +2,9 @@
 <ModMetaData>
     <name>MH: MUFF Reforged</name>
     <description>[img]https://i.imgur.com/7xuCZqW.png[/img]
-[h1]Submod for LEGACY [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2917948202]Android Tiers Reforged - Standalone [ATR][/url][/h1]
+[h1]Submod for Mechanical Humanlikes: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2917948202]Mechanical Biomimetics[/url][/h1]
 Designed for Rimworld 1.4
-Mod Version V1.0.1
+Mod Version V1.0
 Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
 
 [table]
@@ -16,7 +16,7 @@ Please consider rating this if you like it! It really helps out. [img]https://i.
 *Make sure there are no existing Reforged MUFF's, or jobs to create them, and (as always) employ [url=https://steamcommunity.com/workshop/filedetails/?id=2921585989]Mid-saver Saver[/url] to remove in the safest way possible.
 
 [img]https://i.imgur.com/6o9HyTD.png[/img]
-This mod brings back the classic MUFF Unit, upgraded with a twist to enhance the new lore of ATR.
+This mod brings back the classic MUFF Unit, upgraded with a twist to enhance the new lore of of the Android Tiers universe.
 
 [i]"An upgrade to the original MUFF unit, inspired by the muffalos of the rim, which became obsolete with the emergence of the TORT. While technically smaller the TORT was a more secure caravan animal, and a superior assistance animal due to its advanced trainability. The MUFF designers subsequently went back to the drawing board to develop something able to fulfill its own niche.
 Thus the Melee Usable Fighting Freight (MUFF) Unit was replaced with the Multi Utility Freight Form (MUFF) Unit, by a design team that really wanted to make an acronym fit a pre-determined word.
@@ -30,13 +30,14 @@ Unfortunately, the behavioral programming loops necessary to ensure it eats enou
 [img]https://i.imgur.com/Qp8JBtZ.png[/img]
 [h1]Recommended:[/h1]
 [list]
-[*]Works best with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2944347505]ATR Industrial Automatons[/url]!
-[*]Works best with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2933248825]ATR Frames Reforged[/url]!
+[*]Works best with MH: Industrial Automatons!
+[*]Works best with MH: Frames Reforged!
+[*]See my Choice Collection [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3151500886]here[/url]!
 [/list]
 
-[h1]Compatibility:[/h1]
+[h1]Incompatibilities:[/h1]
 [list]
-[*]Built-in patch for co-existing with Return MUFF
+[*]Built-in patch for co-existing with Return MUFF (if it ever gets updated)
 [*]No known incompatibilities.*
 [/list]
 
@@ -45,13 +46,10 @@ Unfortunately, the behavioral programming loops necessary to ensure it eats enou
 *Combat Extended does their own compatibility patches; this is fine if they're patched for ATR.
 
 [img]https://i.imgur.com/lQRf9dG.png[/img]
-[b]Will this work with other older Android Tiers mods?[/b]
-[i]No, ATR uses specific ATR tagged versions of things, which it calls upon to work.[/i]
+[b]Can this be patched to work with -insert mod-?[/b]
+[i]If you make a patch, I'll happily add it in. I may make patches if they're easy, but I won't be doing any messy patches myself though.[/i]
 
-[b]Can this be patched to work with other versions of Android Tiers?[/b]
-[i]If you make a patch, I'll happily add it in. I have no intention of patching it myself though.[/i]
-
-[b]Will you add the other localisations for other languages like ATR has?[/b]
+[b]Will you add the other localisations for other languages?[/b]
 [i]As above, if you would like to provide a localisation, I'll happily add it in.[/i]
 
 [img]https://i.imgur.com/UN80Om5.png[/img]
@@ -66,7 +64,7 @@ Go to the GitHub (linked below) and submit a pull request.
 
 [h1]Links[/h1]
 The Repo for this mod can be found here:
-[url=https://github.com/MasterOfGrey/ATR-MUFF-Reforged/tree/Legacy-ATR]GitHub[/url]
+[url=https://github.com/MasterOfGrey/MH-MUFF-Reforged]GitHub[/url]
 I hang out in the discord for the main Android Tiers Reforged mod:
 [url=https://discord.gg/udNCpbkABT]Discord[/url]
 
@@ -97,6 +95,7 @@ ATR Team:
 	</modDependencies>
 	<incompatibleWith>
 		<li>Atlas.AndroidTiers</li><!--Having them both active at the same time would be a little silly -->
+		<li>Killathon.AndroidTiersReforged</li><!--Having them both active at the same time would be a little silly -->
 		<li>EdB.PrepareCarefully</li><!-- Hijacks generated/edited pawns at world start, breaks C# hediffs of edited pawns and who knows what else -->
 		<li>EdB.PrepareCarefully.UnofficialPatch</li><!-- Hijacks generated/edited pawns at world start, breaks C# hediffs of edited pawns and who knows what else -->
 		<li>EdB.PrepareCarefully.alonske.fork</li><!-- Hijacks generated/edited pawns at world start, breaks C# hediffs of edited pawns and who knows what else -->
