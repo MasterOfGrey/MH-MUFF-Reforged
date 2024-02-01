@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="ATR_MechanicalAnimalThingBase">
+		<defName>ATB_DronePlasMUFF</defName>
+		<label>MUFF unit</label>
+		<description>An upgrade to the original MUFF unit, inspired by the muffalos of the rim, which became obsolete with the emergence of the TORT. While technically smaller the TORT was a more secure caravan animal, and a superior assistance animal due to its advanced trainability. The MUFF designers subsequently went back to the drawing board to develop something able to fulfill its own niche.\n\nThus the Melee Usable Fighting Freight (MUFF) Unit was replaced with the Multi Utility Freight Form (MUFF) Unit, by a design team that really wanted to make an acronym fit a pre-determined word.\n\nThe new MUFF unit is an older sibling to the Nutrition and Mineral units; it too produces nutrient solution (though not as quickly) and uses more advanced spacer synthesis techniques to grow synthread instead of steel. This has the added perk of making it look even more like the muffalos that inspired it.\n\nUnfortunately, the behavioral programming loops necessary to ensure it eats enough food makes it incompatible with even intermediate training, but it does still serve as an excellent caravan animal that will defend itself.</description>
+		<statBases>
+			<MarketValue>1550</MarketValue>
+			<MoveSpeed>4.20</MoveSpeed>
+			<ComfyTemperatureMin>-100</ComfyTemperatureMin>
+			<ComfyTemperatureMax>100</ComfyTemperatureMax>
+			<ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.80</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.60</ArmorRating_Heat>
+		</statBases>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			</li>
+		</tools>
+		<comps>
+			<li Class="CompProperties_Shearable">
+				<woolDef>Synthread</woolDef>
+				<shearIntervalDays>5</shearIntervalDays>
+				<woolAmount>330</woolAmount> <!-- This is dumb but honestly if you're not using this with IA I don't see why you'd ever want more than 1 of these. -->
+			</li>
+			<li Class="CompProperties_Milkable">  <!-- 75% as efficient as a Nutrition Unit. -->
+				<milkDef>ATB_NutrientSolution</milkDef>
+				<milkIntervalDays>2</milkIntervalDays>
+				<milkAmount>20</milkAmount>
+				<milkFemaleOnly>false</milkFemaleOnly>
+			</li>
+		</comps>
+		<race>
+			<body>ATB_MechQuadrupedal</body>
+			<packAnimal>true</packAnimal>
+			<baseBodySize>3.6</baseBodySize>      
+			<baseHealthScale>1.85</baseHealthScale>
+			<baseHungerRate>3.8</baseHungerRate> <!-- Some efficiency from spacer tech. -->
+			<nameOnTameChance>1</nameOnTameChance>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.0</minAge>
+					<soundWounded>Pawn_Muffalo_Wounded</soundWounded>
+					<soundDeath>Pawn_Muffalo_Death</soundDeath>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+		<butcherProducts>
+			<Steel>40</Steel>
+			<Plasteel>40</Plasteel>
+			<ComponentIndustrial>12</ComponentIndustrial>
+		</butcherProducts>
+	</ThingDef>
+	
+	<PawnKindDef ParentName="ATR_MechanicalAnimalKindBase">
+		<defName>ATB_DronePlasMUFF</defName>
+		<label>MUFF unit</label>
+		<race>ATB_DronePlasMUFF</race>
+		<combatPower>20</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>0.5</ecoSystemWeight>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/DronePlasMUFF/DronePlasMUFF</texPath>
+					<drawSize>2.75</drawSize>
+					<shadowData>
+						<volume>(0.8, 0.6, 0.6)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/DronePlasMUFF/DronePlasMUFF</texPath>
+					<drawSize>2.2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

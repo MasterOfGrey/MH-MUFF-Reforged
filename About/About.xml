@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>MH: MUFF Reforged</name>
+    <description>[img]https://i.imgur.com/7xuCZqW.png[/img]
+[h1]Submod for LEGACY [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2917948202]Android Tiers Reforged - Standalone [ATR][/url][/h1]
+Designed for Rimworld 1.4
+Mod Version V1.0.1
+Please consider rating this if you like it! It really helps out. [img]https://i.imgur.com/tE28cZ7.gif[/img]
+
+[table]
+    [tr]
+        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
+        [td][img]https://i.imgur.com/Be8E2qJ.png[/img][/td]
+    [/tr]
+[/table]
+*Make sure there are no existing Reforged MUFF's, or jobs to create them, and (as always) employ [url=https://steamcommunity.com/workshop/filedetails/?id=2921585989]Mid-saver Saver[/url] to remove in the safest way possible.
+
+[img]https://i.imgur.com/6o9HyTD.png[/img]
+This mod brings back the classic MUFF Unit, upgraded with a twist to enhance the new lore of ATR.
+
+[i]"An upgrade to the original MUFF unit, inspired by the muffalos of the rim, which became obsolete with the emergence of the TORT. While technically smaller the TORT was a more secure caravan animal, and a superior assistance animal due to its advanced trainability. The MUFF designers subsequently went back to the drawing board to develop something able to fulfill its own niche.
+Thus the Melee Usable Fighting Freight (MUFF) Unit was replaced with the Multi Utility Freight Form (MUFF) Unit, by a design team that really wanted to make an acronym fit a pre-determined word.
+The new MUFF unit is an older sibling to the Nutrition and Mineral units; it too produces nutrient solution (though not as quickly) and uses more advanced spacer synthesis techniques to grow synthread instead of steel. This has the added perk of making it look even more like the muffalos that inspired it.
+Unfortunately, the behavioral programming loops necessary to ensure it eats enough food makes it incompatible with even intermediate training, but it does still serve as an excellent caravan animal that will defend itself."[/i]
+
+[img]https://i.imgur.com/Wh5EspM.png[/img]
+[h1]Features:[/h1]
+- One Reforged MUFF Unit
+
+[img]https://i.imgur.com/Qp8JBtZ.png[/img]
+[h1]Recommended:[/h1]
+[list]
+[*]Works best with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2944347505]ATR Industrial Automatons[/url]!
+[*]Works best with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2933248825]ATR Frames Reforged[/url]!
+[/list]
+
+[h1]Compatibility:[/h1]
+[list]
+[*]Built-in patch for co-existing with Return MUFF
+[*]No known incompatibilities.*
+[/list]
+
+[u]The following mods are special cases:[/u]
+*EdB Prepare Carefully eventually breaks all custom pawns; but that's their problem.
+*Combat Extended does their own compatibility patches; this is fine if they're patched for ATR.
+
+[img]https://i.imgur.com/lQRf9dG.png[/img]
+[b]Will this work with other older Android Tiers mods?[/b]
+[i]No, ATR uses specific ATR tagged versions of things, which it calls upon to work.[/i]
+
+[b]Can this be patched to work with other versions of Android Tiers?[/b]
+[i]If you make a patch, I'll happily add it in. I have no intention of patching it myself though.[/i]
+
+[b]Will you add the other localisations for other languages like ATR has?[/b]
+[i]As above, if you would like to provide a localisation, I'll happily add it in.[/i]
+
+[img]https://i.imgur.com/UN80Om5.png[/img]
+[h1]Language Translations[/h1]
+[list]
+[*]None Available
+[/list]
+All translations are provided by the community in a voluntary capacity - I don't do them myself.
+Translations are not guaranteed to be up-to-date or to have errors fixed promptly.
+[h3]Want to submit a translation to your own language?[/h3]
+Go to the GitHub (linked below) and submit a pull request.
+
+[h1]Links[/h1]
+The Repo for this mod can be found here:
+[url=https://github.com/MasterOfGrey/ATR-MUFF-Reforged/tree/Legacy-ATR]GitHub[/url]
+I hang out in the discord for the main Android Tiers Reforged mod:
+[url=https://discord.gg/udNCpbkABT]Discord[/url]
+
+[h1]Creators[/h1]
+OG AT Peeps:
+* Atlas - The true original creator
+* ARandomKiwi - Creator of the wonderous and incredible AT++ content and maintainer
+
+ATR Team:
+* RWDevathon - The great balancer
+* FG_Remastered - PR overlord, diplomat, integral supporter
+* lazycooken - Jumpstarter and eager supporter
+* Winterbloom - Graphic and xml supporter
+</description>
+	<author>MasterOfGrey</author>
+	<supportedVersions>
+		<li>1.4</li>
+	</supportedVersions>
+	<packageId>MasterOfGrey.MUFFReforgedMH</packageId>
+	<url>https://github.com/MasterOfGrey/MH-MUFF-Reforged/releases/latest</url>
+	<modDependencies>
+		<li>
+			<packageId>Killathon.MechHumanlikes.MechanicalBiomimetics</packageId>
+			<displayName>MH: Mechanical Biomimetics</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2917948202</steamWorkshopUrl>
+			<downloadUrl>https://github.com/RWDevathon/Android-Tiers-Biomimetics/releases/latest</downloadUrl>
+		</li>
+	</modDependencies>
+	<incompatibleWith>
+		<li>Atlas.AndroidTiers</li><!--Having them both active at the same time would be a little silly -->
+		<li>EdB.PrepareCarefully</li><!-- Hijacks generated/edited pawns at world start, breaks C# hediffs of edited pawns and who knows what else -->
+		<li>EdB.PrepareCarefully.UnofficialPatch</li><!-- Hijacks generated/edited pawns at world start, breaks C# hediffs of edited pawns and who knows what else -->
+		<li>EdB.PrepareCarefully.alonske.fork</li><!-- Hijacks generated/edited pawns at world start, breaks C# hediffs of edited pawns and who knows what else -->
+	</incompatibleWith>
+	<loadAfter>
+		<li>Killathon.MechHumanlikes.MechanicalBiomimetics</li><!-- Dependency -->
+		<li>MasterOfGrey.IndustrialAutomatonsMH</li><!-- Designed load order. -->
+		<li>tkhakiro.androidtiersreforged.returnmuff</li><!-- Designed load order. -->
+		<li>Ludeon.RimWorld</li><!-- Just making extra sure... -->
+		<li>Ludeon.RimWorld.Royalty</li><!-- Just making extra sure... -->
+		<li>Ludeon.RimWorld.Ideology</li><!-- Just making extra sure... -->
+		<li>Ludeon.RimWorld.Biotech</li><!-- Just making extra sure... -->
+	</loadAfter>
+</ModMetaData>

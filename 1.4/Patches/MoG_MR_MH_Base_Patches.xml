@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Patch for all MH dependencies -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<!-- Patch for Mechanical Humanlikes Core -->
+			<!-- Add mechanical animals to MHC's generic surgery recipes at the abstract level -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[@Name = "MHC_surgeryMechanicalBase"]/recipeUsers</xpath>
+				<value>
+					<li>ATB_DronePlasMUFF</li>
+				</value>
+			</li>
+
+			<!-- Patch for MH: Android Tiers Core -->
+			<!-- Add Reforged MUFF Unit to ATC's android surgery recipes at the abstract level -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/RecipeDef[@Name="ATR_surgeryMechanicalBase"]/recipeUsers</xpath>
+				<value>
+					<li>ATB_DronePlasMUFF</li>
+				</value>
+			</li>
+
+			<!-- Patch for MH: Biomimetics -->
+			<!-- Patch Drones -->
+			<!-- Buff ATR_DroneTORT so it's not totally left behind while still approaching something reasonable for classic MUFF. -->
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="ATB_DroneTORT"]/race/baseBodySize</xpath>
+				<value>
+					<baseBodySize>3.2</baseBodySize>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<!-- Patch for other base MH mods -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>MH: Android Tiers</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<!-- Patch for MH: Android Tiers -->
+				<!-- Adding MUFF to the caravans of incoming mechanical traders. -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/FactionDef[defName="ATR_AndroidUnion"]/pawnGroupMakers/li[kindDef="Trader"]/carriers</xpath>
+						<value>
+							<ATB_DronePlasMUFF>4</ATB_DronePlasMUFF>
+						</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

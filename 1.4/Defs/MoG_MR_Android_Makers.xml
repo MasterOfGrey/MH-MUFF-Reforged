@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="ATR_MakeableGeneratorBase">
+		<defName>ATB_PlasMUFFGenerator</defName>
+		<label>MUFF Unit</label>
+		<description>Create a blank M.U.F.F unit. An advanced utility biomimetic that is extremely useful for long caravan trips.</description>
+		<graphicData>
+			<texPath>Things/Pawn/DronePlasMUFF/DronePlasMUFF_east</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<recipeMaker>
+			<researchPrerequisite>ATB_MilitaryBiomimetics</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<Steel>40</Steel>
+			<Plasteel>80</Plasteel>
+			<ComponentIndustrial>22</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<comps>
+			<li Class="ATReforged.CompProperties_PawnSpawner">
+				<pawnKind>ATB_DronePlasMUFF</pawnKind>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

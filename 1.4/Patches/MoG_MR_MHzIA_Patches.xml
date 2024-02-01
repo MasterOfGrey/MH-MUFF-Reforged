@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Adjust MH for MUFF Reforged if IA does not exist, else make IA relevant changes. -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ResearchProjectDef[defName = "ATR_SpacerSynthesisTechniques"]</xpath>
+		<!-- Success means IA is loaded, so nomatch is only MH. -->
+		<nomatch Class="PatchOperationSequence">
+			<!-- Context Dependent MH Patches -->
+			<operations>
+				<!-- ATB_MilitaryBiomimetics -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATB_MilitaryBiomimetics"]/label</xpath>
+					<value><label>Spacer mimetics</label></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATB_MilitaryBiomimetics"]/description</xpath>
+					<value><description>Iterating upon utility biomimetics, this research delves into more advanced materials science and military applications. Significantly more complicated than copying mere domesticated farm animals, militarization can lead to miniature swarm drones, mechanical hounds, or more experimental adaptations.</description></value></li>
+			</operations>
+		</nomatch>
+		<match Class="PatchOperationFindMod">
+			<mods>
+				<li>MH: Industrial Automatons</li>
+			</mods>
+			<match Class="PatchOperationSequence">
+				<!-- IA Patches (after checking to be doubly sure that IA is in fact loaded and no funny business is afoot) -->
+				<operations>
+					<!-- ATB_DronePlasMUFF -->
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="ATB_DronePlasMUFF"]/description</xpath>
+						<value>
+							<description>An upgrade to the original MUFF unit, inspired by the muffalos of the rim, which became obsolete with the emergence of the TORT. While technically smaller the TORT was a more secure caravan animal, and a superior assistance animal due to its advanced trainability. The MUFF designers subsequently went back to the drawing board to develop something able to fulfill its own niche.\n\nThus the Melee Usable Fighting Freight (MUFF) Unit was replaced with the Multi Utility Freight Form (MUFF) Unit, by a design team that really wanted to make an acronym fit a pre-determined word.\n\nThe new MUFF unit is an older sibling to the Nutrition and Mineral units; it too produces nutrient solution (though not as quickly) and uses more advanced spacer synthesis techniques to grow plasteel fibres instead of steel. This has the added perk of making it look even more like the muffalos that inspired it.\n\nUnfortunately, the behavioral programming loops necessary to ensure it eats enough food makes it incompatible with even intermediate training, but it does still serve as an excellent caravan animal that will defend itself.</description>
+						</value></li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="ATB_PlasMUFFGenerator"]/recipeMaker/researchPrerequisite</xpath>
+						<value>
+							<researchPrerequisite>ATR_MultiUtilityMimetics</researchPrerequisite>
+						</value></li>
+					<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="ATB_DronePlasMUFF"]/comps</xpath>
+						<value>
+							<comps>
+								<li Class="CompProperties_Shearable">
+									<woolDef>ATR_PlasteelFibres</woolDef>
+									<shearIntervalDays>5</shearIntervalDays>
+									<woolAmount>5000</woolAmount>
+								</li>
+								<li Class="CompProperties_Milkable">  <!-- Included so it isn't wiped on the PatchOpReplace. -->
+									<milkDef>ATB_NutrientSolution</milkDef>
+									<milkIntervalDays>2</milkIntervalDays>
+									<milkAmount>20</milkAmount>
+									<milkFemaleOnly>false</milkFemaleOnly>
+								</li>
+							</comps>
+						</value></li>
+					
+				</operations>
+			</match>
+		</match>
+	</Operation>
+
+</Patch>

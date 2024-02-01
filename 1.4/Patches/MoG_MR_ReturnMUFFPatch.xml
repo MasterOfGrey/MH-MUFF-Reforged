@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>	
+
+	<!-- Patches to use ATR features for MUFF Reforged -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Android Tiers Reforged - Return MUFF</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			<!-- Patch in a balance for Return MUFF Drone, TORT, and Reforged MUFF -->
+				<!-- ATB_DroneTORT -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ATB_DroneTORT"]/race/baseBodySize</xpath>
+					<value>
+						<baseBodySize>3.8</baseBodySize>
+					</value></li>
+				<!-- ATR_DroneMUFF -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ATR_DroneMUFF"]/race/baseBodySize</xpath>
+					<value>
+						<baseBodySize>4.2</baseBodySize>
+					</value></li>
+				<li Class="PatchOperationReplace">
+						<xpath>/Defs/ThingDef[defName="ATR_DroneMUFF"]/description</xpath>
+						<value>
+							<description>The original MUFF unit, inspired by the muffalos of the rim, with exceptional strength and temperature regulation that far surpasses their biological cousin. The emergence of the highly trainable TORT unit has caused its design to be largely abandoned, but there remain many MUFF units in operation simply because they remain more useful than not having a MUFF unit.\n\nSome particular communities have also decided to be original MUFF enthusiasts; they shun the newer TORT in favour of their classic friendly MUFFs. A caravan community on a budget may also still have cause to build one occasionally, as they are still marginally cheaper to construct than a TORT.</description>
+						</value></li>
+				<!-- ATB_DronePlasMUFF -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ATB_DronePlasMUFF"]/race/baseBodySize</xpath>
+					<value>
+						<baseBodySize>4.4</baseBodySize>
+					</value></li>
+			</operations>
+		</match>
+	</Operation>
+    
+</Patch>
