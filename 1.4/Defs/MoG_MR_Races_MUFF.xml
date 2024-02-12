@@ -56,12 +56,34 @@
 			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
 			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
 			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
-		</race>
+            <ageGenerationCurve>
+                <points>
+                    <li>(0,0)</li>
+                    <li>(1,100)</li>
+                    <li>(2,0)</li>
+                </points>
+            </ageGenerationCurve>
+        </race>
+        <recipes>
+            <li>MHC_CoolantInjection</li>
+        </recipes>
 		<butcherProducts>
 			<Steel>40</Steel>
 			<Plasteel>40</Plasteel>
 			<ComponentIndustrial>12</ComponentIndustrial>
 		</butcherProducts>
+		<modExtensions>
+            <li Class="MechHumanlikes.MHC_MechanicalPawnExtension">
+                <blacklistedNeeds>
+                    <li MayRequire="Dubwise.DubsBadHygiene">Hygiene</li>
+                    <li MayRequire="Dubwise.DubsBadHygiene">Bladder</li>
+                    <li MayRequire="Dubwise.DubsBadHygiene">DBHThirst</li>
+                </blacklistedNeeds>
+                <mechanicalNeeds>
+                    <li><key>MHC_Coolant</key><value>2</value></li>
+                </mechanicalNeeds>
+            </li>
+		</modExtensions>
 	</ThingDef>
 	
 	<PawnKindDef ParentName="ATR_MechanicalAnimalKindBase">
